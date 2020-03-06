@@ -59,6 +59,8 @@ Repeat.as_firebirdsql = Repeat.as_oracle
 Radians.as_firebirdsql = Radians.as_oracle
 
 class DatabaseOperations(BaseDatabaseOperations):
+    compiler_module = "djfirebirdsql.compiler"
+
     cast_char_field_without_max_length = 'varchar(8191)'
 
     cast_data_types = {
